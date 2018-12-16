@@ -20,7 +20,7 @@ private:
     
     rs2::pipeline pipe;
     rs2::frameset frames;
-    float depth_scale;
+    float depthScale;
     
     rs2::decimation_filter dec_filter;
     rs2::spatial_filter spat_filter;
@@ -31,9 +31,11 @@ private:
     rs2::disparity_transform disparity_to_depth;
     
     ofShader maskShader;
-    ofImage rgbImage;
+    
+    //ofFbo result;
+    //ofImage rgbImage;
+    ofImage irImage;
     ofImage depthImage;
-    ofFbo result;
 public:
     void setup();
     void update();

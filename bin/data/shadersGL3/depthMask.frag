@@ -19,10 +19,22 @@ void main()
 {
     vec4 maskColor = texture(mask, texCoordVarying).rgba;
     vec4 color = texture(tex0, texCoordVarying).rgba;
+    //color = vec4(0, 0, 10, 1);
     
-    int distance = maskColor.r << 8 + maskColor.g;
-    if (distance < threshold)
+    float dist = 255 * (maskColor.r + maskColor.g * 256);
+    
+    if (dist < threshold) {
         outputColor = color;
+    }
+    else if (dist < threshold + fadingDistance) {
+        float k = (dist - threshold) / fadingDistance;
+        outputColor = vec4(
+                           k + color.r * (1 - k),
+                           k + color.g * (1 - k),
+                           k + color.b * (1 - k),
+                           1
+        );
+    }
     else
         outputColor = vec4(1, 1, 1, 1);
 }

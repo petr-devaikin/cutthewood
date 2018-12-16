@@ -12,7 +12,7 @@
 		5A4349E9754D6FA14C0F2A3A /* tinyxmlparser.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FC5DA1C87211D4F6377DA719 /* tinyxmlparser.cpp */; };
 		5CBB2AB3A60F65431D7B555D /* ofxButton.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C88333E71C9457E441C33474 /* ofxButton.cpp */; };
 		63B57AC5BF4EF088491E0317 /* ofxXmlSettings.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 50DF87D612C5AAE17AAFA6C0 /* ofxXmlSettings.cpp */; };
-		6F9540E6218E21AE00FA8981 /* librealsense2.2.13.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 6F9540E5218E21AE00FA8981 /* librealsense2.2.13.0.dylib */; };
+		6FCEEB5321C6718E00540D31 /* librealsense2.2.16.1.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 6FCEEB5221C6718E00540D31 /* librealsense2.2.16.1.dylib */; };
 		837220E80EB56CD44AD27F2A /* ofxSlider.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 15F2C6477A769C03A56D1401 /* ofxSlider.cpp */; };
 		852E0891794923EE7583C621 /* ofxInputField.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 44B351490B620D04E1E7C52D /* ofxInputField.cpp */; };
 		853E0BA2F448076739446874 /* ofxColorPicker.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 181D363B6DD54D1FA6309C43 /* ofxColorPicker.cpp */; };
@@ -71,6 +71,7 @@
 		52AFA1F08C420992CAAAE648 /* ofxSlider.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = ofxSlider.h; path = ../../../addons/ofxGui/src/ofxSlider.h; sourceTree = SOURCE_ROOT; };
 		6F9540E5218E21AE00FA8981 /* librealsense2.2.13.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = librealsense2.2.13.0.dylib; path = ../../../../../../../usr/local/lib/librealsense2.2.13.0.dylib; sourceTree = "<group>"; };
 		6FCEEB5021C667AC00540D31 /* shadersGL3 */ = {isa = PBXFileReference; lastKnownFileType = folder; name = shadersGL3; path = bin/data/shadersGL3; sourceTree = "<group>"; };
+		6FCEEB5221C6718E00540D31 /* librealsense2.2.16.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = librealsense2.2.16.1.dylib; path = ../../../../../../../usr/local/lib/librealsense2.2.16.1.dylib; sourceTree = "<group>"; };
 		78D67A00EB899FAC09430597 /* ofxLabel.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = ofxLabel.cpp; path = ../../../addons/ofxGui/src/ofxLabel.cpp; sourceTree = SOURCE_ROOT; };
 		802251BAF1B35B1D67B32FD0 /* ofxSliderGroup.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = ofxSliderGroup.cpp; path = ../../../addons/ofxGui/src/ofxSliderGroup.cpp; sourceTree = SOURCE_ROOT; };
 		832BDC407620CDBA568B713D /* tinyxmlerror.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = tinyxmlerror.cpp; path = ../../../addons/ofxXmlSettings/libs/tinyxmlerror.cpp; sourceTree = SOURCE_ROOT; };
@@ -101,7 +102,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6F9540E6218E21AE00FA8981 /* librealsense2.2.13.0.dylib in Frameworks */,
+				6FCEEB5321C6718E00540D31 /* librealsense2.2.16.1.dylib in Frameworks */,
 				E4328149138ABC9F0047C5CB /* openFrameworksDebug.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -156,6 +157,7 @@
 		6F9540E4218E21AD00FA8981 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				6FCEEB5221C6718E00540D31 /* librealsense2.2.16.1.dylib */,
 				6F9540E5218E21AE00FA8981 /* librealsense2.2.13.0.dylib */,
 			);
 			name = Frameworks;
