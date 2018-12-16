@@ -32,8 +32,8 @@ private:
     
     ofShader maskShader;
     ofImage rgbImage;
+    ofImage depthImage;
     ofFbo result;
-    unsigned short * depthCameraData;
 public:
     void setup();
     void update();

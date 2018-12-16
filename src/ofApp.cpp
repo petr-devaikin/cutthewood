@@ -33,7 +33,8 @@ void ofApp::setup(){
     
     // init images and buffers
     rgbImage.allocate(WIDTH, HEIGHT, OF_IMAGE_COLOR);
-    depthCameraData = new unsigned short [WIDTH * HEIGHT]();
+    depthImage.allocate(WIDTH, HEIGHT, OF_IMAGE_COLOR);
+    //depthCameraData = new unsigned short [WIDTH * HEIGHT]();
 }
 
 //--------------------------------------------------------------
@@ -50,7 +51,13 @@ void ofApp::update(){
     
     memcpy(rgbImage.getPixels().getData(), rgbFrame.get_data(), WIDTH * HEIGHT * 3);
     rgbImage.update();
-    memcpy(depthCameraData, depthFrame.get_data(), WIDTH * HEIGHT * 2);
+    
+    // copy depth bits to r and g channels of depthImage
+    for (int i = 0; i < WIDTH * HEIGHT; i++) {
+        depthImage.getPixels().getData()[3 * i] = ((const char *) depthFrame.get_data())[2 * i];
+        depthImage.getPixels().getData()[3 * i + 1] = ((const char *) depthFrame.get_data())[2 * i + 1];
+        depthImage.getPixels().getData()[3 * i + 2] = 0;
+    }
 }
 
 //--------------------------------------------------------------
@@ -63,7 +70,7 @@ void ofApp::draw(){
 //--------------------------------------------------------------
 void ofApp::exit(){
     pipe.stop();
-    delete[] depthCameraData;
+    //delete[] depthCameraData;
 }
 
 //--------------------------------------------------------------
