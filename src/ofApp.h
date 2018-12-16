@@ -14,7 +14,11 @@ private:
     const int WIDTH = 1280;
     const int HEIGHT = 720;
     
-    ofxPanel gui;
+    const int PIXEL_SIZE_PX = 80;
+    const int ACTIVE_LINE_Y_PX = 300; // where to show words;
+    
+    const int MIN_DISTANCE_M = 2;
+    
 
     bool camFound;
     
@@ -30,12 +34,18 @@ private:
     rs2::disparity_transform depth_to_disparity;
     rs2::disparity_transform disparity_to_depth;
     
-    ofShader maskShader;
+    ofShader invertShader;
     
     //ofFbo result;
-    //ofImage rgbImage;
-    ofImage irImage;
-    ofImage depthImage;
+    ofImage rgbImage;
+    ofFbo fontCanvas;
+    
+    void drawWord(int start, int length);
+    
+    char * pixels;
+    ofTrueTypeFont myfont;
+    
+    vector<string> words;
 public:
     void setup();
     void update();
